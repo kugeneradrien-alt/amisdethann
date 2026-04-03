@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Amis de Thann</title>
+    <style>
+        /* Configuration de la page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+    .sommaire li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center; 
+}
+
+/* Création du petit cercle */
+.sommaire li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: gray; /* Couleur par défaut */
+}
+
+/* Attribution d'une couleur unique par élément du sommaire */
+.sommaire li:nth-child(1)::before { background-color: #e74c3c; } /* Rouge */
+.sommaire li:nth-child(2)::before { background-color: #3498db; } /* Bleu */
+.sommaire li:nth-child(3)::before { background-color: #2ecc71; } /* Vert */
+.sommaire li:nth-child(4)::before { background-color: #f1c40f; } /* Jaune */
+.sommaire li:nth-child(5)::before { background-color: #9b59b6; } /* Violet */
+.sommaire li:nth-child(6)::before { background-color: #e67e22; } /* Orange */
+.sommaire li:nth-child(7)::before { background-color: #1abc9c; } /* Turquoise */
+.sommaire li:nth-child(8)::before { background-color: #34495e; } /* Gris-bleu */
+    
+
+
+        body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    /* On règle l'aspect visuel */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    opacity: 0.3; 
+
+    /* On lance l'animation (20 secondes, en boucle) */
+    animation: diaporama 20s infinite;
+}
+
+/* Définition du changement d'images */
+@keyframes diaporama {
+    0%   { background-image: url('IMG_20231215_172016.jpg'); }
+    25%  { background-image: url('IMG_20231215_172016.jpg'); }
+    33%  { background-image: url('IMG_20230612_161300.jpg'); }
+    58%  { background-image: url('IMG_20230612_161337.jpg'); }
+    66%  { background-image: url('IMG_20230628_103021.jpg'); }
+    91%  { background-image: url('IMG_20230628_103021.jpg'); }
+    100% { background-image: url('IMG_20231215_172016.jpg'); }
+}
+        /* Bandeau rouge */
+        .bandeau-rouge {
+            background-color: red;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .bandeau-rouge img {
+            height: 100px;
+            border: 2px solid white;
+            transition: transform 0.2s;
+        }
+
+        .bandeau-rouge img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sommaire orange */
+        .sommaire {
+            border: 3px solid orange;
+            background-color: #fff5e6;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sommaire ul {
+            display: flex;         
+            flex-wrap: wrap;      
+            justify-content: center; 
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .sommaire li {
+            margin: 0 15px;        
+        }
+
+        .sommaire a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .sommaire a:hover {
+            color: orange;
+        }
+
+        /* Conteneur principal */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        
+        h1, p {
+            position: relative;
+            z-index: 1;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bandeau-rouge">
+        <a href="accueil.html"><img src="logo.jpg" alt="Logo"></a>
+        <img src="IMG_0173.JPG">
+        <img src="IMG_20231215_172016.jpg">
+        <img src="IMG_20230602_155552.webp">
+        <img src="IMG_20231211_165548.webp">
+        <img src="IMG_20230628_103021.jpg">
+    </div>
+
+    <div class="main-container">
+        <nav class="sommaire">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li> 
+                <li><a href="histoire.html">Histoire de l'association</a></li>
+                <li><a href="les principaux sites.html">Les principaux sites</a></li>
+                <li><a href="Nos activités.html">Nos activités</a></li>
+                <li><a href="nous rejoindre.html">Nous rejoindre</a></li>
+                <li><a href="nos articles.html">Nos articles</a></li>
+                <li><a href="les objets du musée.html">Les objets du musée</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+            
+        </nav>
+
+        <h1>les principaux sites</h1>
+        <h2>Engelbourg</h2>
+        <h3>histoire</h3>
+        <p>Ce monument aujourd'hui emblématique de la ville de Thann voit son origine au XIIIe siècle. Il faut alors rappeler l'ouverture de cols dans les Vosges, permettant des échanges, et des pélerinages entre le nord de la Flandre et le Nord de l'Italie. Alors, le passage s'accentua fortement dans la vallée de la Thur qui devint effectivement un lieu privilégié pour le passage. </p>
+        <p>La famille seigneuriale dominant la zone, la seigneurerie des Ferrettes, décida donc d'établir un péage, à Thann (ils en possédaient déjà un à Vieux-Thann, ils l'ont déplacé sur Thann, lieu mieux adapté pour capter ce nouveau flux), ainsi qu'un nouveau château (ils ont déjà eu un premier château en bois quelque part à Vieux-Thann)</p>
+        <p>Vers 1234, nous avons la 1ère mention directe du château de Thann.</p>
+        <p>En 1390, L'archiduc Léopold III de Habsbourg cède un impôt aux villes de Thann et de Masevaux afin de faire crépir le mur du château (mur que l'on n'a pas pu identifier).</p>
+        <p>Entre 1471 et 1473, Les commissions d'enquêtes bourguignonnes donnent une description du château dont l'extension est très proche du plan des environs de 1660. Leur énumération ne permet pas de localiser précisément les bâtiments décrits. Les couvertures en tuiles et bardeaux sont décrites en mauvaise état.</p>
+        <p>En 1557, des réparations ont eu lieu sur une localisation inconnue.</p>
+        <p>En 1570, la maison du châtelain tombant en ruine est détruite.</p>
+        <p>Entre 1593 et 1601, on remet en état le logis du châtelain et les ouvrages de défenses.</p>
+        <p>Entre 1618 et 1621, on engage les travaux pour créer un puits, surement sur la base d'une ancienne citerne.</p>
+        <p>En 1673, de mai à septembre, on détruit de façon systématique ce qu'il reste du château.</p>
+        <h3><li><a href="album photo Engelbourg.html">cliquez ici pour voir l'album photo</a></li></h3>
+        <h2>collégiale Saint-Thiébaut</h2>
+        <h2>la cabane des bangards</h2>
+        <h3>un peu d'histoire</h3>
+        
+        <p><img src="cabane des bangards.PNG">Ce que l'on appelle la « cabane des bangards » est une maisonnette à colombages située autrefois au milieu du vignoble et actuellement près du Relais Culturel Pierre-Schiélé.
+Elle comporte une pièce unique d'environ 20 m2, recouvrant une cave, et surmontée d'un grenier.
+Il y avait une cheminée pour le chauffage et quelques placards de rangement.</p>
+<p>Cette pièce servait de logement pour les 4 bangards (gardiens du ban, du vignoble) pendant leur mandat annuel -du printemps à l'automne– période d'activité agraire. Les repas étaient fournis par leurs familles…</p>
+<p>Elle se remarque visuellement par l'arbre croissant à son côté. C'était un magnifique peuplier, arbre « de la liberté »planté en 1848 et qui fut remplacé en 2009 – suite à une tempête.</p>
+<p>L'originalité de cet édifice est d'être bien conservé et de présenter aux journées du Patrimoine les souvenirs laissés à la postérité par certains bangards : des dalles de pierre et des tableaux peints.</p>
+<h3>Que savons nous bangards?</h3>
+<img src="cabane 2.PNG">
+<p>A l'origine, il s'agit de 4 bourgeois élus en janvier parmi les 4 corporations reconnues de Thann.
+
+Ces bangards devaient pour exercer leur charge cesser d'exercer leur métier pendant une année et loger du printemps à l'automne dans la "cabane des bangards".
+
+Les bangards devaient prêter serment à leur prise de fonction.</p>
+<p>Leur rôle est lié à l'importance de la viticulture dans l'économie thannoise (ils doivent à la fois protéger le vignoble des dégâts causés par les hommes ou les animaux, faire assurer l'entretien de certains chemins, surveiller la divagation d'animaux et prévenir les incendies en forêt; mais à titre général ils doivent faire régner l'ordre sur le ban de la cité avec droit d'infliger des amendes tant pour les dégâts matériels  que pour d'autres atteintes plus politiques - par exemple inciter les jeunes gens à fréquenter les églises ...)</p>
+<p>Toutefois, il fallait avoir été bangard pour prétendre entrer au "Magistrat", le conseil qui administrait la ville.</p>
+
+<p>La liste des noms de plus de 800 bangards entre 1483 et 1789 est connue !</p>
+<h3>Les objets des bangards</h3>
+1. Les tableaux des bangards
+Les dalles de pierre et les tableaux peints présentent des points communs :
+
+<p>- l'année de fonction</p>
+
+<p>- les noms ou initiales des 4 bangards concernés</p>
+
+<p>- les emblèmes de leurs métiers dans des écus</p>
+
+<p>- (pour les tableaux) : un résumé des faits marquants de l'année, en allemand de l'époque.</p>
+
+<p>Les 15 tableaux ci-dessous des bangards sont exposés en permanence au Musée.Trouvez le plus étonnant où l'on voit un homme chuter du sommet de la collégiale !</p>
+<div class="container">
+  <img src="b1.PNG" alt="Image 1">
+  <img src="b2.PNG" alt="Image 2">
+</div>
+        <h2>la halle à blé (abritant aujourd'hui le musée)</h2>
+
+        <h2>la croix de Lorraine</h2>
+        
+    </div>
+
+</body>
+</html>

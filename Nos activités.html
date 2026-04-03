@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Amis de Thann</title>
+    <style>
+        /* Configuration de la page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+    .sommaire li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center; 
+}
+
+/* Création du petit cercle */
+.sommaire li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: gray; /* Couleur par défaut */
+}
+
+/* Attribution d'une couleur unique par élément du sommaire */
+.sommaire li:nth-child(1)::before { background-color: #e74c3c; } /* Rouge */
+.sommaire li:nth-child(2)::before { background-color: #3498db; } /* Bleu */
+.sommaire li:nth-child(3)::before { background-color: #2ecc71; } /* Vert */
+.sommaire li:nth-child(4)::before { background-color: #f1c40f; } /* Jaune */
+.sommaire li:nth-child(5)::before { background-color: #9b59b6; } /* Violet */
+.sommaire li:nth-child(6)::before { background-color: #e67e22; } /* Orange */
+.sommaire li:nth-child(7)::before { background-color: #1abc9c; } /* Turquoise */
+.sommaire li:nth-child(8)::before { background-color: #34495e; } /* Gris-bleu */
+    
+
+
+        /* L'arrière-plan dilué */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('IMG_20231215_172016.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); 
+            opacity: 0.3; /* Baissé pour que le texte soit lisible */
+            z-index: -1;
+        }
+
+        /* Bandeau rouge */
+        .bandeau-rouge {
+            background-color: red;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .bandeau-rouge img {
+            height: 100px;
+            border: 2px solid white;
+            transition: transform 0.2s;
+        }
+
+        .bandeau-rouge img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sommaire orange */
+        .sommaire {
+            border: 3px solid orange;
+            background-color: #fff5e6;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sommaire ul {
+            display: flex;         
+            flex-wrap: wrap;      
+            justify-content: center; 
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .sommaire li {
+            margin: 0 15px;        
+        }
+
+        .sommaire a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .sommaire a:hover {
+            color: orange;
+        }
+
+        /* Conteneur principal */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        
+        h1, p {
+            position: relative;
+            z-index: 1;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bandeau-rouge">
+        <a href="accueil.html"><img src="logo.jpg" alt="Logo"></a>
+        <img src="IMG_0173.JPG">
+        <img src="IMG_20231215_172016.jpg">
+        <img src="IMG_20230602_155552.webp">
+        <img src="IMG_20231211_165548.webp">
+        <img src="IMG_20230628_103021.jpg">
+    </div>
+
+    <div class="main-container">
+        <nav class="sommaire">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li> 
+                <li><a href="histoire.html">Histoire de l'association</a></li>
+                <li><a href="les principaux sites.html">Les principaux sites</a></li>
+                <li><a href="Nos activités.html">Nos activités</a></li>
+                <li><a href="nous rejoindre.html">Nous rejoindre</a></li>
+                <li><a href="nos articles.html">Nos articles</a></li>
+                <li><a href="les objets du musée.html">Les objets du musée</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+            
+        </nav>
+
+        <h1>Nos activités</h1>
+        
+    </div>
+
+</body>
+</html>

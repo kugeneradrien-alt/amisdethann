@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Amis de Thann</title>
+    <style>
+        /* Configuration de la page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+    .sommaire li {
+    margin: 0 15px;
+    display: flex;
+    align-items: center; 
+}
+
+/* Création du petit cercle */
+.sommaire li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: gray; /* Couleur par défaut */
+}
+
+/* Attribution d'une couleur unique par élément du sommaire */
+.sommaire li:nth-child(1)::before { background-color: #e74c3c; } /* Rouge */
+.sommaire li:nth-child(2)::before { background-color: #3498db; } /* Bleu */
+.sommaire li:nth-child(3)::before { background-color: #2ecc71; } /* Vert */
+.sommaire li:nth-child(4)::before { background-color: #f1c40f; } /* Jaune */
+.sommaire li:nth-child(5)::before { background-color: #9b59b6; } /* Violet */
+.sommaire li:nth-child(6)::before { background-color: #e67e22; } /* Orange */
+.sommaire li:nth-child(7)::before { background-color: #1abc9c; } /* Turquoise */
+.sommaire li:nth-child(8)::before { background-color: #34495e; } /* Gris-bleu */
+    
+
+
+        /* L'arrière-plan dilué */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('IMG_20231215_172016.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); 
+            opacity: 0.3; /* Baissé pour que le texte soit lisible */
+            z-index: -1;
+        }
+
+        /* Bandeau rouge */
+        .bandeau-rouge {
+            background-color: red;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .bandeau-rouge img {
+            height: 100px;
+            border: 2px solid white;
+            transition: transform 0.2s;
+        }
+
+        .bandeau-rouge img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Sommaire orange */
+        .sommaire {
+            border: 3px solid orange;
+            background-color: #fff5e6;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sommaire ul {
+            display: flex;         
+            flex-wrap: wrap;      
+            justify-content: center; 
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+        }
+
+        .sommaire li {
+            margin: 0 15px;        
+        }
+
+        .sommaire a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .sommaire a:hover {
+            color: orange;
+        }
+
+        /* Conteneur principal */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        
+        h1, p {
+            position: relative;
+            z-index: 1;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bandeau-rouge">
+        <a href="accueil.html"><img src="logo.jpg" alt="Logo"></a>
+        <img src="IMG_0173.JPG">
+        <img src="IMG_20231215_172016.jpg">
+        <img src="IMG_20230602_155552.webp">
+        <img src="IMG_20231211_165548.webp">
+        <img src="IMG_20230628_103021.jpg">
+    </div>
+
+    <div class="main-container">
+        <nav class="sommaire">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li> 
+                <li><a href="histoire.html">Histoire de l'association</a></li>
+                <li><a href="les principaux sites.html">Les principaux sites</a></li>
+                <li><a href="Nos activités.html">Nos activités</a></li>
+                <li><a href="nous rejoindre.html">Nous rejoindre</a></li>
+                <li><a href="nos articles.html">Nos articles</a></li>
+                <li><a href="les objets du musée.html">Les objets du musée</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+            
+        </nav>
+
+        <h1>Histoire de l'association</h1>
+        <p>La Société d’Histoire "les Amis de Thann" a été fondée dans les derniers jours de la Grande guerre, le 8 septembre 1918, dans le bureau même du capitaine administrateur de la ville sous l’impulsion du Duc Edouard Mortier
+             de Trévise, directeur du foyer franco-américain de Saint-Amarin. Cette toute nouvelle association s’occupe dès la fin de la guerre de trouver un local pour le futur musée qui doit regrouper les œuvres mises à l’abri à Sewen au fond de la vallée de la Doller durant les hostilités. Ces objets seront rassemblés au « Foyer du Soldat » de Thann,﻿
+La nouvelle société s’était fixée comme premier objectif "de soustraire aux destructions violentes, comme aux dispersions lentes" tous les objets pouvant "faire connaître les coutumes et les goûts des Alsaciens, et leur attachement à la France". 
+
+
+Le comité mis en place désigna Ferdinand Scheurer comme président.</p>
+
+<p>Charles Weissbeck conservateur du musée abrita les premières collections dans une salle du collège ; plus tard elles seront présentées dans une maison Place des Vignerons.</p>
+
+<p>En 1932, J. Baptiste Weiss-Blocher succéda à Ferdinand Scheurer. Cette période de l’entre deux guerres fut marquée par la présentation de deux grandes expositions : en 1937 "le culte de Saint-Thiébaut" et "le centenaire du chemin de Fer de Mulhouse à Thann en 1939".</p>
+
+ 
+
+<p>Durant l’occupation, "les Amis de Thann" devinrent "Tanner Geschichtsfreunde" ; l’association publia  son premier annuaire en 1943 en collaboration avec les autres sociétés d’histoire locale du voisinage. Au moment de la débâcle allemande en décembre 1944, les collections du musée furent gravement endommagées. Il fallut alors trouver un nouveau local pour y installer les collections. </p>
+
+ 
+
+<p>8 février 1947, les statuts de l’association furent modifiés. La nouvelle dénomination "Société d’Histoire, les Amis de Thann" élargit ses activités et à côté de la conservation du patrimoine, ajoutait la recherche historique. Louis Bockel assurait alors la présidence de l’association.
+
+Le maire, Modeste Zussy proposa d’installer le musée dans les locaux de la halle aux blés qui avaient autrefois servi de salle des fêtes. En 1957, la nouvelle municipalité, conduite par Pierre Schiélé inaugura le musée dans ce cadre, si pittoresque. Pierre Boigeol, épaulé de son comité, s’efforça de réaménager systématiquement les collections du musée selon les principes muséologiques modernes.</p>
+
+ <p><img src="Capture.PNG"</p>
+
+<p>René Kirner succéda comme conservateur du musée à Ch. Weissbeck en 1968. En 1974, Joseph Baumann prit la relève de Pierre Boigeol à la tête des "Amis de Thann". La recherche historique progressa grandement avec la publication de l’Inventaire Topographique des richesses patrimoniales du canton de Thann en 1980 et "L’histoire de Thann, des origines à nos jours" de Joseph Baumann en 1981.
+
+ 
+
+Le 25 janvier 1985 l’assemblée générale de la Société d’Histoire "les Amis de Thann", désigna, sur proposition du président sortant, de remettre "les clefs de la maison" à André Rohmer. Le comité élargi, qui s’est mis au travail, a pu réaliser avec l’appui de la ville de Thann la rénovation intérieure de la halle aux blés et la mise en place d’une salle d’exposition aux normes nouvelles. Au printemps 1986, la société a publié son premier bulletin, "Petite et Grande Histoire".
+
+ 
+
+En 1988, Yves Boeglin succéda à René Kirner après avoir été son adjoint. Pendant 13 ans, grâce à son énergie et ses compétences, Yves Boeglin a mis inlassablement en valeur les richesses du musée avant de laisser sa place en 2001 pendant 2 ans à son adjoint Marc Brenin.  Depuis 2003, Albert Ehret a pris la suite en effectuant notamment un remarquable travail d'inventaire (le récolement demandé par le Ministère de la Culture).</p>  ﻿
+
+
+
+<p>Lors de l’assemblée générale de l’an 2000, les 'Amis de Thann' ont élargi leur compétences à "la recherche et l’étude des familles du Pays de Thann" en créant une section de généalogie.</p>
+    
+    </div>
+
+</body>
+</html>
